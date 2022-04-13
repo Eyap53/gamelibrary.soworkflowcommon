@@ -2,8 +2,7 @@ namespace GameLibrary.SOWorkflowCommon.Events
 {
 	using UnityEngine;
 
-    public abstract class EventChannelBaseSO : ScriptableObject
+    public abstract class EventChannelBaseSO : DescriptionBaseSO
 	{
-		[TextArea] public string description;
 	}
 }
