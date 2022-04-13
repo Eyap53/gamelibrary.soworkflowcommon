@@ -1,5 +1,5 @@
 {
-    "name": "GameLibrary.SOWorkflowCommon.Tests",
+    "name": "GameLibrary.SOWorkflowCommon.Variables.Tests",
     "rootNamespace": "",
     "references": [
         "GameLibrary.SOWorkflowCommon",
