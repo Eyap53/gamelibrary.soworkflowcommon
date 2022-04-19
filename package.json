@@ -1,6 +1,6 @@
 {
   "name": "com.maellacour.gamelibrary.soworkflowcommon",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "displayName": "SO Workflow Common",
   "description": "A library package that contains common used scripts to build an app using the ScriptableObjects (SO) workflow",
   "unity": "2020.1",
