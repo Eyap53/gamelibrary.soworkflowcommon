@@ -27,7 +27,7 @@ namespace GameLibrary.SOWorkflowCommon.Variables.Tests
 		[Test]
 		public void UpdateRuntimeValue()
 		{
-			_so.runtimeValue = _nextValue;
+			_so.SetValue(_nextValue);
 			Assert.AreEqual(_so.runtimeValue, _nextValue);
 		}
 
@@ -37,7 +37,7 @@ namespace GameLibrary.SOWorkflowCommon.Variables.Tests
 			Tstruct valueModifiedOnCallback = default(Tstruct);
 			_so.OnValueChanged += (v) => valueModifiedOnCallback = v;
 
-			_so.runtimeValue = _nextValue;
+			_so.SetValue(_nextValue);
 
 			Assert.AreEqual(_nextValue, valueModifiedOnCallback);
 			Assert.True(true);
@@ -46,11 +46,11 @@ namespace GameLibrary.SOWorkflowCommon.Variables.Tests
 		[Test]
 		public void NoChangeRaiseNoCallback()
 		{
-			_so.runtimeValue = _nextValue;
+			_so.SetValue(_nextValue);
 
 			bool callbackCalled = false;
 			_so.OnValueChanged += (v) => callbackCalled = true;
-			_so.runtimeValue = _nextValue;
+			_so.SetValue(_nextValue);
 
 			Assert.False(callbackCalled);
 		}
